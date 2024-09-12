@@ -49,10 +49,10 @@ setInterval(moveCarousel, 3000);
 // Función para cambiar imágenes según el tamaño de la pantalla
 function cambiarImagenes() {
   if (window.innerWidth <= 768) {
-    document.getElementById('img1').src = 'img/banner_01_300x300.jpg';
-    document.getElementById('img2').src = 'img/banner_02_300x300.jpg';
-    document.getElementById('img3').src = 'img/banner_03_300x300.jpg';
-    document.getElementById('img4').src = 'img/banner_04_300x300.jpg';
+    document.getElementById('img1').src = 'img/banner_01_300x300.jpeg';
+    document.getElementById('img2').src = 'img/banner_02_300x300.jpeg';
+    document.getElementById('img3').src = 'img/banner_03_300x300.jpeg';
+    document.getElementById('img4').src = 'img/banner_04_300x300.jpeg';
   } else {
     document.getElementById('img1').src = 'img/banner_01.jpg';
     document.getElementById('img2').src = 'img/banner_02.jpg';

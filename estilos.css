@@ -920,9 +920,7 @@ footer .bottom-details .bottom_text {
   }
 
   .carousel-container {
-    width: 300px;
-    height: 300px;
-    margin-left: px;
+    width: 100%;
   }
 
   .category-container {
@@ -942,8 +940,7 @@ footer .bottom-details .bottom_text {
   }
 
   .carousel-slide img {
-    width: 100%;
-    height: auto;
+    width: 300px;
   }
 
   /* Modificaciones para cambiar imágenes del carrusel */
@@ -1056,7 +1053,7 @@ footer .bottom-details .bottom_text {
 @media (min-width: 769px) and (max-width: 1024px) {
   .carousel-container {
     width: 90%;
-    height: auto;
+  
   }
 
   .category-container {
