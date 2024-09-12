@@ -921,6 +921,7 @@ footer .bottom-details .bottom_text {
 
   .carousel-container {
     width: 100%;
+    border: none;
   }
 
   .category-container {
@@ -939,16 +940,14 @@ footer .bottom-details .bottom_text {
     font-size: 14px;
   }
 
-  .carousel-slide img {
-    width: 300px;
-  }
-
   /* Modificaciones para cambiar imágenes del carrusel */
   .carousel-slide img {
     width: 100%;
     height: auto;
   }
-
+  .carousel-slide {
+    flex-wrap: nowrap; /* Evita que las imágenes se envuelvan */
+  }
   .social-media {
     position: fixed;
     top: 50%;
