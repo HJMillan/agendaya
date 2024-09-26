@@ -64,3 +64,21 @@ function cambiarImagenes() {
 // Cambiar imágenes al cargar la página y al redimensionar
 window.addEventListener('resize', cambiarImagenes);
 window.addEventListener('load', cambiarImagenes);
+
+//footer desplegable en telefono
+document.addEventListener("DOMContentLoaded", function() {
+  var collapsibleTitles = document.querySelectorAll(".collapsible-title");
+
+  collapsibleTitles.forEach(function(title) {
+      title.addEventListener("click", function() {
+          // Activa o desactiva el contenido
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+              content.style.display = "none";
+          } else {
+              content.style.display = "block";
+          }
+      });
+  });
+});
