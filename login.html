@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles/login.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="form-wrapper sign-up">
+            <form action="">
+                <h2>Registro</h2>
+                <div class="input-group">
+                    <input type="text" required>
+                    <label for="">Usuario</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" required>
+                    <label for="">Email</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" required>
+                    <label for="">Contraseña</label>
+                </div>
+                <button type="submit" class="btn">Registro</button>
+                <div class="sign-link">
+                    <p>Ya tienes una cuenta? <a href="#" class="signIn-link">Ingresa</a></p>
+                </div>  
+            </form>
+        </div>
+
+        <div class="form-wrapper sign-in">
+            <form action="">
+                <h2>Ingresa</h2>
+                <div class="input-group">
+                    <input type="text" required>
+                    <label for="">Usuario</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" required>
+                    <label for="">Contraseña</label>
+                </div>
+                <div class="forgot-pass">
+                    <a href="#">Olvidaste la contraseña?</a>
+                </div>
+                <button type="submit" class="btn">Ingresa</button>
+                <div class="sign-link">
+                    <p>No tienes cuenta? <a href="#" class="signUp-link">Sign Up</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="scripts/login.js"></script>
+</body>
+</html>
