@@ -1,0 +1,64 @@
+/* Oculta el contenido por defecto con una transición suave */
+.content {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+
+/* Muestra el contenido cuando la clase 'visible' está presente */
+.content.visible {
+    opacity: 1;
+    max-height: 1000px; /* Puedes ajustar este valor según el tamaño del contenido */
+}
+
+/* Estructura de las secciones */
+.Auditorium .content,
+.colon .content,
+.mar .content,
+.v_victoria .content {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+/* Estructura del mapa y la información */
+.info-map {
+    display: flex;
+    justify-content: space-between; /* Distribuye la información y el mapa */
+    margin-bottom: 20px;
+    height: 100%; /* Hace que la sección ocupe el 100% del contenedor */
+}
+
+.informacion,
+.mapa {
+    flex: 1; /* Permite que información y mapa ocupen el mismo ancho */
+    display: flex;
+    flex-direction: column; /* Hace que la información/historia estén una debajo de la otra */
+}
+
+.informacion {
+    justify-content: space-between; /* Asegura que el contenido de "Información" se distribuya verticalmente */
+    margin-right: 10px; /* Espacio entre la información y el mapa */
+}
+
+.mapa {
+    display: flex;
+    align-items: center; /* Centra la imagen verticalmente */
+    justify-content: center;
+    flex-grow: 1; /* La imagen ocupará todo el espacio posible */
+}
+
+.mapa img {
+    max-width: 100%; /* La imagen se ajusta al contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+/* Estilo para la sección de Historia */
+.content h3 {
+    margin-top: 0; /* Ajusta el margen superior para reducir espacio */
+}
+
+.content p {
+    flex-grow: 1; /* Hace que el párrafo de historia ocupe el espacio vertical restante */
+}

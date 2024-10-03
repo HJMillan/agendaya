@@ -1,0 +1,89 @@
+/* ===== Variables ===== */
+:root {
+    --background-color: #f4f4f4;
+    --header-color: #dc143c;
+    --text-color: #333;
+    --profile-bg-color: #fff;
+}
+
+/* ===== Estilos Generales ===== */
+body {
+    font-family: 'Poppins', sans-serif; /* Cambiado a Poppins */
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    min-height: 100vh; /* Asegura que el cuerpo ocupe toda la altura de la ventana */
+    overflow: hidden; /* Oculta el overflow */
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+.header {
+    background-color: var(--header-color);
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.profile {
+    background-color: var(--profile-bg-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Header de perfil */
+.profile-header {
+    display: flex;
+    align-items: center;
+}
+
+.profile-image {
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.name {
+    margin: 0;
+}
+
+.profession {
+    color: #777;
+}
+
+.profile-details {
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+.essential-info {
+    display: none; /* Ocultar por defecto */
+}
+
+h3 {
+    margin-top: 15px;
+    color: var(--header-color);
+    cursor: pointer;
+}
+
+.content {
+    display: none; /* Ocultar por defecto */
+    padding-left: 20px;
+}
+
+.toggle-section {
+    cursor: pointer;
+    color: var(--header-color);
+}
