@@ -1,4 +1,3 @@
-
 // Selecciona todos los encabezados h2 dentro de la clase 'mapa'
 const headers = document.querySelectorAll('.mapa h2');
 

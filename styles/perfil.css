@@ -1,6 +1,6 @@
 /* ===== Variables ===== */
 :root {
-    --background-color: #f4f4f4;
+    --background: linear-gradient(75deg, #6a6a6a, #c0c0c0, #ffffff);; /* Color de fondo suave */
     --header-color: #dc143c;
     --text-color: #333;
     --profile-bg-color: #fff;
@@ -11,7 +11,7 @@ body {
     font-family: 'Poppins', sans-serif; /* Cambiado a Poppins */
     margin: 0;
     padding: 0;
-    background-color: var(--background-color);
+    background: var(--background);
     display: flex;
     justify-content: center; /* Centrado horizontal */
     align-items: center; /* Centrado vertical */

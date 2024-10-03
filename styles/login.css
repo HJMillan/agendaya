@@ -12,7 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: black;
+    background: linear-gradient(75deg, #6a6a6a, #c0c0c0, #ffffff);; /* Color de fondo suave */;
     overflow: hidden;
 }
 

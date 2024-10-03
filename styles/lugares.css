@@ -1,3 +1,38 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(75deg, #6a6a6a, #c0c0c0, #ffffff);; /* Color de fondo suave */
+}
+
+/* Títulos */
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+h2 {
+    cursor: pointer; /* Cambia el cursor al pasar sobre h2 */
+    color: #dc143c; /* Color azul para los encabezados */
+}
+
+/* Estructura de las secciones */
+.lugar {
+    width: 80%; /* Fija el ancho de cada lugar */
+    max-width: 600px; /* Ancho máximo para que no crezca demasiado en pantallas grandes */
+    margin: 20px auto; /* Margen automático para centrar */
+    padding: 15px;
+    background-color: #fff; /* Fondo blanco para los lugares */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: transform 0.3s; /* Efecto de transformación al pasar el ratón */
+}
+
+.lugar:hover {
+    transform: scale(1.02); /* Aumenta ligeramente el tamaño al pasar el ratón */
+}
+
 /* Oculta el contenido por defecto con una transición suave */
 .content {
     opacity: 0;
@@ -12,22 +47,11 @@
     max-height: 1000px; /* Puedes ajustar este valor según el tamaño del contenido */
 }
 
-/* Estructura de las secciones */
-.Auditorium .content,
-.colon .content,
-.mar .content,
-.v_victoria .content {
-    display: flex;
-    flex-direction: column;
-    height: auto;
-}
-
 /* Estructura del mapa y la información */
 .info-map {
     display: flex;
     justify-content: space-between; /* Distribuye la información y el mapa */
     margin-bottom: 20px;
-    height: 100%; /* Hace que la sección ocupe el 100% del contenedor */
 }
 
 .informacion,
@@ -42,14 +66,7 @@
     margin-right: 10px; /* Espacio entre la información y el mapa */
 }
 
-.mapa {
-    display: flex;
-    align-items: center; /* Centra la imagen verticalmente */
-    justify-content: center;
-    flex-grow: 1; /* La imagen ocupará todo el espacio posible */
-}
-
-.mapa img {
+.map-image {
     max-width: 100%; /* La imagen se ajusta al contenedor */
     height: auto; /* Mantiene la proporción de la imagen */
 }
