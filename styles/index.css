@@ -458,61 +458,6 @@ body.dark .home .text {
   /* Cambia el color de fondo al pasar el ratón */
 }
 
-/*scroll bar*/
-.text-scroll-container {
-  width: 100%;
-  /* Ancho total del contenedor */
-  max-width: 1000px;
-  /* Ancho máximo de 1000px */
-  margin: 0 auto;
-  /* Centrar el contenedor horizontalmente */
-  overflow: hidden;
-  /* Ocultar el contenido que se salga del contenedor */
-  white-space: nowrap;
-  /* Evitar que el texto se divida en varias líneas */
-  position: fixed;
-  /* Mantener el scroll en la parte superior */
-  top: 0;
-  /* Posición en la parte superior */
-  left: 50%;
-  /* Alinearlo al borde izquierdo */
-  align-items: center;
-  transform: translateX(-50%);
-  /* Centrar el contenedor horizontalmente */
-  background: linear-gradient(75deg, #6a6a6a, #c0c0c0, #ffffff);
-  z-index: 1000;
-  /* Asegurar que el contenedor esté por encima del contenido */
-  border-radius: 3px;
-}
-
-.text-scroll {
-  display: inline-block;
-  white-space: nowrap;
-  /* Forzar que el texto esté en una sola línea */
-  animation: scroll-text 30s linear infinite;
-  /* Animación continua */
-}
-
-.text-scroll span {
-  display: inline-block;
-  padding: 0 40px;
-  /* Espacio entre los textos */
-  font-size: 18px;
-  /* Tamaño de fuente */
-  color: #333;
-  /* Color del texto */
-}
-
-@keyframes scroll-text {
-  0% {
-    transform: translateX(100%);
-  }
-
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
 /*tarjeta eventos*/
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
@@ -679,7 +624,7 @@ body.dark .home .text {
 /* footer===============================================================================0*/
 
 footer {
-  background: #411f9a;
+  background: #dc143c;
   width: 1000px;
   border-radius: 10px;
   padding: 20px;
@@ -744,30 +689,15 @@ footer .content .top {
   height: auto;
 }
 
-.top .media-icons a:nth-child(1) {
-  background: #4267b2;
-}
-
 .top .media-icons a:nth-child(1):hover {
-  color: #4267b2;
   background: #fff;
-}
-
-.top .media-icons a:nth-child(2) {
-  background: #1da1f2;
 }
 
 .top .media-icons a:nth-child(2):hover {
-  color: #1da1f2;
   background: #fff;
 }
 
-.top .media-icons a:nth-child(3) {
-  background: #e1306c;
-}
-
 .top .media-icons a:nth-child(3):hover {
-  color: #e1306c;
   background: #fff;
 }
 
@@ -859,7 +789,7 @@ footer .content .link-boxes .box {
 }
 
 .link-boxes .input-box input[type="button"] {
-  background: #fff;
+  background: #fff;/* color boton sumate*/
   color: #3824d2;
   border: none;
   font-size: 18px;
@@ -876,7 +806,9 @@ footer .content .link-boxes .box {
 
 footer .bottom-details {
   width: 100%;
-  background: #049ac8;
+  background: pink;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 footer .bottom-details .bottom_text {
@@ -891,7 +823,7 @@ footer .bottom-details .bottom_text {
 .bottom-details .bottom_text a {
   font-size: 14px;
   font-weight: 300;
-  color: #fff;
+  color: red;
   opacity: 0.8;
   text-decoration: none;
 }

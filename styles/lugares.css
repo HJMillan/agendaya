@@ -1,39 +1,61 @@
-/* General */
+/* ===== Variables ===== */
+:root {
+    --background: linear-gradient(75deg, #6a6a6a, #c0c0c0, #ffffff); /* Color de fondo suave */
+    --header-color: #dc143c;
+    --text-color: #333;
+    --profile-bg-color: #fff;
+}
+
+/* ===== Estilos Generales ===== */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(75deg, #6a6a6a, #c0c0c0, #ffffff);; /* Color de fondo suave */
+    background: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-/* Títulos */
-h1 {
+/* Asegurarse de que ambos contenedores compartan el mismo ancho */
+.container,
+.mapa {
+    width: 80%;  /* Asegura el mismo ancho para ambas secciones */
+    max-width: 100%;  /* No permite que exceda el 100% del ancho de la pantalla */
+    margin: auto;
+    padding: 20px;
+}
+
+/* ===== Header ===== */
+.header {
+    background-color: var(--header-color);
+    color: #fff;
+    padding: 10px 0;
     text-align: center;
-    margin: 20px 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    width: 72%;
+    align-self: center;
 }
 
-h2 {
-    cursor: pointer; /* Cambia el cursor al pasar sobre h2 */
-    color: #dc143c; /* Color azul para los encabezados */
-}
-
-/* Estructura de las secciones */
-.lugar {
-    width: 80%; /* Fija el ancho de cada lugar */
-    max-width: 600px; /* Ancho máximo para que no crezca demasiado en pantallas grandes */
-    margin: 20px auto; /* Margen automático para centrar */
+/* ===== Estilos para las secciones ===== */
+.lugar,
+.profile {
+    width: 70%;
+    margin: 20px auto;
     padding: 15px;
-    background-color: #fff; /* Fondo blanco para los lugares */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    border-radius: 5px; /* Bordes redondeados */
-    transition: transform 0.3s; /* Efecto de transformación al pasar el ratón */
+    background-color: var(--profile-bg-color); /* Fondo blanco en ambos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px; /* Bordes redondeados en ambos */
+    transition: transform 0.3s;
 }
 
 .lugar:hover {
-    transform: scale(1.02); /* Aumenta ligeramente el tamaño al pasar el ratón */
+    transform: scale(1.02);
 }
 
-/* Oculta el contenido por defecto con una transición suave */
+/* ===== Ocultar contenido por defecto ===== */
 .content {
     opacity: 0;
     max-height: 0;
@@ -41,41 +63,31 @@ h2 {
     transition: opacity 0.5s ease, max-height 0.5s ease;
 }
 
-/* Muestra el contenido cuando la clase 'visible' está presente */
 .content.visible {
     opacity: 1;
-    max-height: 1000px; /* Puedes ajustar este valor según el tamaño del contenido */
+    max-height: 1000px;
 }
 
-/* Estructura del mapa y la información */
+/* ===== Info Map Layout ===== */
 .info-map {
     display: flex;
-    justify-content: space-between; /* Distribuye la información y el mapa */
+    justify-content: space-between;
     margin-bottom: 20px;
 }
 
 .informacion,
 .mapa {
-    flex: 1; /* Permite que información y mapa ocupen el mismo ancho */
+    flex: 1;
     display: flex;
-    flex-direction: column; /* Hace que la información/historia estén una debajo de la otra */
+    flex-direction: column;
 }
 
 .informacion {
-    justify-content: space-between; /* Asegura que el contenido de "Información" se distribuya verticalmente */
-    margin-right: 10px; /* Espacio entre la información y el mapa */
+    justify-content: space-between;
+    margin-right: 10px;
 }
 
 .map-image {
-    max-width: 100%; /* La imagen se ajusta al contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
-}
-
-/* Estilo para la sección de Historia */
-.content h3 {
-    margin-top: 0; /* Ajusta el margen superior para reducir espacio */
-}
-
-.content p {
-    flex-grow: 1; /* Hace que el párrafo de historia ocupe el espacio vertical restante */
+    max-width: 100%;
+    height: auto;
 }

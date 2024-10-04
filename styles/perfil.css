@@ -30,12 +30,15 @@ body {
     color: #fff;
     padding: 10px 0;
     text-align: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 .profile {
     background-color: var(--profile-bg-color);
     padding: 20px;
-    border-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
