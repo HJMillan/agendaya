@@ -1,0 +1,88 @@
+/* ===== Colors ===== */
+:root {
+    --body-color: linear-gradient(75deg, #6a6a6a, #c0c0c0, #ffffff);
+    --sidebar-color: #fff;
+    --primary-color: #dc143c;
+    --primary-color-light: #f6f5ff;
+    --toggle-color: #ddd;
+    --text-color: #707070;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--body-color);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: var(--primary-color);
+    text-align: center;
+}
+
+h3 {
+    color: var(--primary-color);
+}
+
+/* Sección Nosotros */
+.nosotros h1 {
+    margin-bottom: 20px;
+}
+
+.nosotros p {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.1em;
+}
+
+.mision-vision {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+.mision-vision div {
+    width: 45%;
+    background-color: var(--sidebar-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.mision-vision h2 {
+    margin-bottom: 10px;
+}
+
+.mision-vision p {
+    font-size: 1.05em;
+    color: var(--text-color);
+}
+
+.integrantes {
+    text-align: center;
+}
+
+.integrante {
+    margin-bottom: 30px;
+}
+
+.integrante p {
+    font-size: 1em;
+    color: var(--text-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+}

@@ -1,0 +1,23 @@
+html:
+<div id="footer-container"></div>
+======================
+js:
+// Función para cargar el footer desde footer.html
+function loadFooter() {
+    fetch('footer.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById('footer-container').innerHTML = data;
+        })
+        .catch(error => {
+            console.error('Error loading footer:', error);
+        });
+}
+
+// Llamar a la función para cargar el footer al cargar la página
+window.onload = loadFooter;

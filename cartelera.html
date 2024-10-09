@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Cartelera de eventos culturales en Agenda Ya. Encuentra eventos de música, teatro y más.">
+    <title>Cartelera de Eventos - Agenda Ya</title>
+    <link rel="stylesheet" href="styles/cartelera.css">
+</head>
+
+<body>
+    <div id="sidebar-container"></div>
+    <header>
+        <h1>Cartelera de Eventos Culturales</h1>
+    </header>
+
+    <!-- Filtro por categoría -->
+    <section class="filter-section">
+        <label for="categoryFilter">Filtrar por categoría:</label>
+        <select id="categoryFilter">
+            <option value="all">Todos</option>
+            <option value="musica">Música</option>
+            <option value="teatro">Teatro</option>
+            <option value="arte">Arte</option>
+            <option value="cine">Cine</option>
+        </select>
+    </section>
+
+    <!-- Cartelera de eventos -->
+    <div class="main-container">
+        <section id="eventGrid" class="event-grid">
+            <!-- Eventos individuales -->
+            <div class="event-card" data-category="musica" onclick="openModal('evento1')">
+                <img src="img/cartelera/1728486125.jpg" alt="Evento 1">
+                <h3>Concierto de Rock</h3>
+                <p>Música - 8/11</p>
+            </div>
+            <div class="event-card" data-category="arte" onclick="openModal('evento2')">
+                <img src="img/cartelera/pexels-202387659-28844763.jpg" alt="Evento 2">
+                <h3>Muestra Cultura China</h3>
+                <p>Muestra - 9/11</p>
+            </div>
+            <div class="event-card" data-category="musica" onclick="openModal('evento3')">
+                <img src="img/cartelera/pexels-annamw-1120162.jpg" alt="Evento 3">
+                <h3>Iron Maiden</h3>
+                <p>Musica - 10/11</p>
+            </div>
+            <div class="event-card" data-category="cine" onclick="openModal('evento4')">
+                <img src="img/cartelera/pexels-cottonbro-3945317.jpg" alt="Evento 4">
+                <h3>Cine y la Ciudad</h3>
+                <p>Cine - 12/11</p>
+            </div>
+            <div class="event-card" data-category="teatro" onclick="openModal('evento5')">
+                <img src="img/cartelera/pexels-israyosoy-28852183.jpg" alt="Evento 5">
+                <h3>Concierto de Rock</h3>
+                <p>Teatro - 11/11</p>
+            </div>
+            <div class="event-card" data-category="teatro" onclick="openModal('evento6')">
+                <img src="img/cartelera/pexels-kosyginl-2888802.jpg" alt="Evento 6">
+                <h3>Obra de Teatro</h3>
+                <p>Teatro - 13/11</p>
+            </div>
+            <div class="event-card" data-category="cine" onclick="openModal('evento7')">
+                <img src="img/cartelera/pexels-minhle17vn-3062545.jpg" alt="Evento 7">
+                <h3>El Cine y Yo</h3>
+                <p>Cine - 14/11</p>
+            </div>
+            <div class="event-card" data-category="teatro" onclick="openModal('evento8')">
+                <img src="img/cartelera/pexels-pixabay-358010.jpg" alt="Evento 8">
+                <h3>El Lago de los Cisnes</h3>
+                <p>Teatro - 15/11</p>
+            </div>
+            <!-- Más eventos -->
+        </section>
+    </div>
+
+    <!-- Modal para mostrar detalles del evento -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle">Detalles del Evento</h2>
+            <p id="modalDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p id="modalDate">Fecha: 25 de Noviembre</p>
+            <p id="modalPlace">Lugar: Teatro Colon</p>
+            <button class="buy-ticket-btn">Comprar Entradas</button>
+        </div>
+    </div>
+    <div id="footer-container"></div>
+    <script src="scripts/cartelera.js"></script>
+</body>
+
+</html>

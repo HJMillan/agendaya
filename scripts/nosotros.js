@@ -1,23 +1,3 @@
-// lugares.js
-const headers = document.querySelectorAll('.mapa h2');
-
-// Recorre cada encabezado y agrega un evento de clic
-headers.forEach(header => {
-    header.addEventListener('click', function () {
-        const content = header.nextElementSibling; // El contenido que sigue al encabezado
-        const allContents = document.querySelectorAll('.content'); // Todos los elementos con clase 'content'
-
-        // Cierra todos los contenidos excepto el que fue clicado
-        allContents.forEach(c => {
-            if (c !== content) {
-                c.classList.remove('visible');
-            }
-        });
-
-        // Alterna la visibilidad del contenido clicado
-        content.classList.toggle('visible');
-    });
-});
 // Función para cargar el sidebar desde un archivo externo
 function loadSidebar() {
     fetch('sidevar.html')  // Asegúrate de que este sea el nombre correcto
@@ -67,6 +47,7 @@ function initializeScroll() {
 }
 // Llama a la función cuando el DOM esté completamente cargado
 document.addEventListener('DOMContentLoaded', loadSidebar);
+
 
 // Función para cargar el footer desde footer.html
 function loadFooter() {

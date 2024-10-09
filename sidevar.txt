@@ -1,23 +1,8 @@
-// lugares.js
-const headers = document.querySelectorAll('.mapa h2');
+html:
+<div id="sidebar-container"></div>
 
-// Recorre cada encabezado y agrega un evento de clic
-headers.forEach(header => {
-    header.addEventListener('click', function () {
-        const content = header.nextElementSibling; // El contenido que sigue al encabezado
-        const allContents = document.querySelectorAll('.content'); // Todos los elementos con clase 'content'
-
-        // Cierra todos los contenidos excepto el que fue clicado
-        allContents.forEach(c => {
-            if (c !== content) {
-                c.classList.remove('visible');
-            }
-        });
-
-        // Alterna la visibilidad del contenido clicado
-        content.classList.toggle('visible');
-    });
-});
+===================================================
+js:
 // Función para cargar el sidebar desde un archivo externo
 function loadSidebar() {
     fetch('sidevar.html')  // Asegúrate de que este sea el nombre correcto
@@ -67,23 +52,3 @@ function initializeScroll() {
 }
 // Llama a la función cuando el DOM esté completamente cargado
 document.addEventListener('DOMContentLoaded', loadSidebar);
-
-// Función para cargar el footer desde footer.html
-function loadFooter() {
-    fetch('footer.html')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok ' + response.statusText);
-            }
-            return response.text();
-        })
-        .then(data => {
-            document.getElementById('footer-container').innerHTML = data;
-        })
-        .catch(error => {
-            console.error('Error loading footer:', error);
-        });
-}
-
-// Llamar a la función para cargar el footer al cargar la página
-window.onload = loadFooter;

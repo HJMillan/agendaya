@@ -1,44 +1,31 @@
-// Carrusel
-const carouselSlide = document.querySelector('.carousel-slide');
-const images = document.querySelectorAll('.carousel-slide img');
-
-let currentIndex = 0;
-const totalImages = images.length;
-
-// Función para mover el carrusel automáticamente
-function moveCarousel() {
-    currentIndex++;
-    if (currentIndex >= totalImages) {
-        currentIndex = 0; // Reiniciar cuando llegue al final
-    }
-
-    // Calcular el ancho de la imagen actual
-    const imageWidth = window.innerWidth <= 768 ? 300 : 1000;
-    carouselSlide.style.transform = `translateX(${-currentIndex * imageWidth}px)`;
-}
-
-// Configurar el intervalo para pasar automáticamente cada 3 segundos (3000ms)
-setInterval(moveCarousel, 3000);
-
-// Función para cambiar imágenes según el tamaño de la pantalla
-function cambiarImagenes() {
-  if (window.innerWidth <= 768) {
-    document.getElementById('img1').src = 'img/banner_01_300x300.jpeg';
-    document.getElementById('img2').src = 'img/banner_02_300x300.jpeg';
-    document.getElementById('img3').src = 'img/banner_03_300x300.jpeg';
-    document.getElementById('img4').src = 'img/banner_04_300x300.jpeg';
-  } else {
-    document.getElementById('img1').src = 'img/banner_01.jpg';
-    document.getElementById('img2').src = 'img/banner_02.jpg';
-    document.getElementById('img3').src = 'img/banner_03.jpg';
-    document.getElementById('img4').src = 'img/banner_04.jpg';
+// Abrir modal al hacer clic en un evento
+function openModal(eventId) {
+    const modal = document.getElementById('modal');
+    // Puedes personalizar el contenido del modal según el evento
+    modal.style.display = 'flex';
   }
-}
-
-// Cambiar imágenes al cargar la página y al redimensionar
-window.addEventListener('resize', cambiarImagenes);
-window.addEventListener('load', cambiarImagenes);
-// Función para cargar el sidebar desde un archivo externo
+  
+  // Cerrar modal
+  function closeModal() {
+    const modal = document.getElementById('modal');
+    modal.style.display = 'none';
+  }
+  
+  // Filtrado de eventos
+  const filter = document.getElementById('categoryFilter');
+  filter.addEventListener('change', function() {
+    const category = filter.value;
+    const cards = document.querySelectorAll('.event-card');
+  
+    cards.forEach(card => {
+      if (category === 'all' || card.getAttribute('data-category') === category) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+  // Función para cargar el sidebar desde un archivo externo
 function loadSidebar() {
   fetch('sidevar.html')  // Asegúrate de que este sea el nombre correcto
       .then(response => {
@@ -87,7 +74,6 @@ function initializeScroll() {
 }
 // Llama a la función cuando el DOM esté completamente cargado
 document.addEventListener('DOMContentLoaded', loadSidebar);
-
 
 // Función para cargar el footer desde footer.html
 function loadFooter() {
