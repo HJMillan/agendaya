@@ -108,3 +108,24 @@ function loadFooter() {
 
 // Llamar a la función para cargar el footer al cargar la página
 window.onload = loadFooter;
+
+//notificaciones
+// Obtener elementos
+const notification = document.getElementById("notification");
+const btnSi = document.querySelector(".btn-si");
+const btnNo = document.querySelector(".btn-no");
+
+// Mostrar notificación al cargar la página
+window.addEventListener('load', function() {
+    notification.classList.add('visible'); // Muestra la notificación
+});
+
+// Cerrar la notificación al hacer clic en los botones
+btnSi.onclick = function() {
+    alert("Gracias por aceptar!");
+    notification.classList.remove('visible'); // Oculta la notificación
+};
+
+btnNo.onclick = function() {
+    notification.classList.remove('visible'); // Oculta la notificación
+};
