@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupos - Compartir Eventos</title>
+    <link rel="stylesheet" href="styles/grupos.css">
+</head>
+<body>
+    <header>
+        <h1>Mis Grupos</h1>
+        <div id="user-info">
+            Jesús Millán - Puntos: 1500
+        </div>
+    </header>
+    <div id="sidebar-container"></div>
+    <main>
+        <section class="grupo" id="grupo1">
+            <h3>Grupo: Amigos del Cine</h3>
+            <p>Compartir eventos y comprar entradas grupales para películas</p>
+            <button class="btn-modificar" onclick="modificarGrupo('grupo1')">Modificar</button>
+            <button class="btn-eliminar" onclick="eliminarGrupo('grupo1')">Eliminar</button>
+        </section>
+
+        <section id="crear-grupo">
+            <h2>Crear Nuevo Grupo</h2>
+            <form id="grupo-form">
+                <input type="text" id="nombre-grupo" placeholder="Nombre del Grupo" required>
+                <textarea id="descripcion-grupo" placeholder="Descripción del Grupo" required></textarea>
+                <button type="submit" class="btn-crear">Crear Grupo</button>
+            </form>
+        </section>
+
+        <section id="lista-grupos">
+            <!-- Aquí aparecerán los grupos creados -->
+        </section>
+    </main>
+    <div id="footer-container"></div>
+    <script src="scripts/grupos.js"></script>
+</body>
+</html>

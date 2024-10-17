@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recompensas - Noticias Culturales</title>
+    <link rel="stylesheet" href="styles/premios.css">
+</head>
+<body>
+    <header>
+        <h1 class="recompensas">Recompensas</h1>
+        <div id="user-info"><strong>
+            <p>Jesús Millan</p>
+            <p>Puntos: <span id="puntos-usuario">1200</span></p></strong>
+        </div>
+    </header>
+
+    <main>
+        <div id="sidebar-container"></div>
+        <section class="recompensas-container">
+            <!-- Producto 1 -->
+            <div class="producto">
+                <img src="img/premios/01.jpeg">
+                <h2>Entrada Festival Internacional de Cine</h2>
+                <p>500 Puntos</p>
+                <button onclick="intercambiarRecompensa('Entrada Festival Cine')">Intercambiar</button>
+            </div>
+            <!-- Producto 2 -->
+            <div class="producto">
+                <img src="img/premios/02.jpg" alt="Entrada Teatro La Tempestad">
+                <h2>Entrada para "La Tempestad"</h2>
+                <p>400 Puntos</p>
+                <button onclick="intercambiarRecompensa('Entrada Teatro La Tempestad')">Intercambiar</button>
+            </div>
+            <!-- Producto 3 -->
+            <div class="producto">
+                <img src="img/premios/03.jpg" alt="Entrada Concierto Sinfónica">
+                <h2>Entrada Concierto Sinfónica</h2>
+                <p>350 Puntos</p>
+                <button onclick="intercambiarRecompensa('Entrada Concierto Sinfónica')">Intercambiar</button>
+            </div>
+            <!-- Producto 4 -->
+            <div class="producto">
+                <img src="img/premios/04.jpg" alt="Merchandising Exclusivo">
+                <h2>Merchandising Exclusivo</h2>
+                <p>600 Puntos</p>
+                <button onclick="intercambiarRecompensa('Merchandising Exclusivo')">Intercambiar</button>
+            </div>
+            <!-- Producto 5 -->
+            <div class="producto">
+                <img src="img/premios/05.png" alt="2x1 en Entradas">
+                <h2>2x1 en Entradas para Eventos</h2>
+                <p>700 Puntos</p>
+                <button onclick="intercambiarRecompensa('2x1 en Entradas')">Intercambiar</button>
+            </div>
+            <!-- Producto 6 -->
+            <div class="producto">
+                <img src="img/premios/06.jpg" alt="Entrada Museo MAR">
+                <h2>Entrada al Museo MAR</h2>
+                <p>300 Puntos</p>
+                <button onclick="intercambiarRecompensa('Entrada Museo MAR')">Intercambiar</button>
+            </div>
+            <!-- Producto 7 -->
+            <div class="producto">
+                <img src="img/premios/07.jpg" alt="Firma de Libros con Autor">
+                <h2>Firma de Libros con Autor</h2>
+                <p>450 Puntos</p>
+                <button onclick="intercambiarRecompensa('Firma de Libros con Autor')">Intercambiar</button>
+            </div>
+            <!-- Producto 8 -->
+            <div class="producto">
+                <img src="img/premios/08.jpg" alt="Entrada Expo Arte Contemporáneo">
+                <h2>Entrada Expo Arte Contemporáneo</h2>
+                <p>380 Puntos</p>
+                <button onclick="intercambiarRecompensa('Entrada Expo Arte Contemporáneo')">Intercambiar</button>
+            </div>
+            <!-- Producto 9 -->
+            <div class="producto">
+                <img src="img/premios/09.jpg" alt="Meet & Greet con Artistas">
+                <h2>Meet & Greet con Artistas</h2>
+                <p>1000 Puntos</p>
+                <button onclick="intercambiarRecompensa('Meet & Greet con Artistas')">Intercambiar</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <p id="mensaje-modal"></p>
+        </div>
+    </div>
+    <div id="footer-container"></div>
+    <script src="scripts/premios.js"></script>
+</body>
+</html>
