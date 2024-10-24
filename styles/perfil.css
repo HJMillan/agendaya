@@ -89,3 +89,44 @@ h3 {
     cursor: pointer;
     color: var(--header-color);
 }
+/*modales para eliminar perfil y cerrar sesion*/
+.profile-actions {
+    margin-left: auto; /* Empuja los botones hacia la derecha */
+}
+
+.action-button {
+    background-color: var(--header-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.action-button:hover {
+    background-color: darkred; /* Un poco más oscuro al pasar el mouse */
+}
+/* ===== Estilos para los Modales ===== */
+.modal {
+    display: none; /* Ocultar por defecto */
+    position: fixed; /* Mantener el modal en la misma posición */
+    z-index: 1000; /* Asegúrate de que esté por encima del contenido */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+}
+
+.modal-content {
+    background-color: var(--profile-bg-color); /* Fondo blanco para el contenido */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra */
+    width: 400px; /* Ancho del modal */
+    text-align: center; /* Centrar texto */
+}
