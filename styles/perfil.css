@@ -130,3 +130,55 @@ h3 {
     width: 400px; /* Ancho del modal */
     text-align: center; /* Centrar texto */
 }
+@media (max-width: 768px) {
+    .container {
+        width: 95%; /* Ajustar el ancho para ocupar más espacio en pantallas pequeñas */
+        padding: 15px; /* Reducir el padding para dispositivos más pequeños */
+    }
+
+    .header {
+        padding: 8px 0; /* Reducir el padding del encabezado */
+        font-size: 1.2rem; /* Disminuir el tamaño de la fuente */
+    }
+
+    .profile-header {
+        flex-direction: column; /* Colocar la imagen y la información en una columna */
+        align-items: center; /* Centrar contenido */
+        text-align: center; /* Centrar el texto */
+    }
+
+    .profile-image {
+        margin-bottom: 15px; /* Añadir un margen inferior para separar de la información */
+        height: 120px; /* Reducir el tamaño de la imagen */
+    }
+
+    .profile-info {
+        margin-bottom: 10px; /* Espacio adicional entre la información y las acciones */
+    }
+
+    .profile-details h3 {
+        font-size: 1rem; /* Reducir el tamaño de los encabezados */
+    }
+
+    .content {
+        padding-left: 10px; /* Reducir el padding izquierdo */
+    }
+
+    .profile-actions {
+        flex-direction: column; /* Colocar los botones en una columna */
+        margin-left: 0; /* Resetear el margen izquierdo */
+        width: 100%; /* Asegurar que los botones ocupen todo el ancho */
+        text-align: center; /* Centrar los botones */
+    }
+
+    .action-button {
+        width: 100%; /* Botones ocupan el ancho completo */
+        margin-left: 0; /* Sin margen a la izquierda */
+        margin-top: 5px; /* Añadir un margen superior entre los botones */
+    }
+
+    .modal-content {
+        width: 90%; /* Ajustar el ancho del modal para pantallas pequeñas */
+        padding: 15px; /* Reducir el padding */
+    }
+}

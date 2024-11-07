@@ -43,3 +43,32 @@ main {
 .noticia p {
     line-height: 1.6;
 }
+@media (max-width: 768px) {
+    body {
+        padding: 0 10px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        padding: 15px;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    .noticia {
+        padding: 10px;
+        margin-bottom: 15px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .noticia h2 {
+        font-size: 1.5rem;
+    }
+
+    .noticia p {
+        font-size: 0.9rem;
+    }
+}

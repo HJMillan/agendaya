@@ -86,3 +86,35 @@ footer {
     text-align: center;
     padding: 15px;
 }
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .mision-vision {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mision-vision div {
+        width: 90%; /* Ajusta el ancho para que los bloques ocupen más espacio en pantallas pequeñas */
+        margin-bottom: 20px; /* Añade un espacio entre los bloques */
+    }
+
+    .mision-vision div:last-child {
+        margin-bottom: 0; /* Elimina el margen inferior del último bloque */
+    }
+
+    .integrante {
+        text-align: left;
+        padding: 10px;
+    }
+
+    h1, h2, h3 {
+        font-size: 1.5rem; /* Reduce el tamaño de las cabeceras */
+    }
+
+    p {
+        font-size: 0.9em; /* Reduce el tamaño de las fuentes */
+    }
+}

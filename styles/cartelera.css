@@ -119,18 +119,54 @@
     background-color: var(--primary-color-light);
   }
   
-  /* Responsividad */
   @media screen and (max-width: 768px) {
+    /* Ajustar el diseño de las tarjetas */
+    .event-grid {
+      grid-template-columns: 1fr; /* Una columna para una tarjeta por fila */
+      gap: 15px; /* Reducir el espacio entre las tarjetas */
+    }
+  
+    /* Ajustar el ancho de las tarjetas */
     .event-card {
-      width: 150px;
+      width: 90%; /* Ocupa el 90% del contenedor padre */
     }
   
+    /* Ajustar la tipografía y los márgenes */
+    header h1 {
+      font-size: 1.5rem; /* Reducir el tamaño del título */
+    }
+  
+    .filter-section {
+      margin: 15px 0; /* Reducir los márgenes */
+    }
+  
+    #categoryFilter {
+      width: 100%; /* Asegura que el selector ocupe todo el ancho */
+      margin: 10px 0; /* Añadir un poco de margen */
+    }
+  
+    /* Ajustar el contenido del modal */
     .modal-content {
-      width: 90%;
+      padding: 15px; /* Reducir el padding */
+      width: 95%; /* Ajustar el ancho para pantallas pequeñas */
     }
   
+    .modal .close {
+      font-size: 30px; /* Reducir el tamaño del botón de cierre */
+    }
   
-  .event-grid {
-    grid-template-columns: 1fr; /* 1 evento por fila en pantallas pequeñas */
+    .buy-ticket-btn {
+      padding: 8px 15px; /* Reducir el padding */
+      font-size: 0.9rem; /* Ajustar el tamaño de la fuente */
+    }
+  
+    /* Ajustar la sección principal */
+    .main-container {
+      padding: 10px; /* Reducir el padding para que haya más espacio */
+    }
+  
+    /* Ajustar las imágenes */
+    .event-card img {
+      height: 120px; /* Reducir la altura de las imágenes */
+    }
   }
-}

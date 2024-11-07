@@ -118,3 +118,47 @@ h2 {
     text-decoration: none;
     cursor: pointer;
 }
+@media (max-width: 768px) {
+    .main-content {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .event-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .event-card {
+        padding: 10px;
+    }
+
+    .event-card img {
+        margin-bottom: 10px;
+    }
+
+    .event-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+    }
+
+    .event-card p {
+        margin-bottom: 10px;
+    }
+
+    .btn-join, .btn-rewatch {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+
+    .close {
+        font-size: 24px;
+    }
+}

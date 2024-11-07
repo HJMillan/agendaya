@@ -100,3 +100,48 @@ button:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
+@media (max-width: 768px) {
+    .recompensas {
+        width: 100%; /* Ajustar al ancho completo de la pantalla */
+        flex-direction: column; /* Hacer que el encabezado sea de columna */
+        text-align: center; /* Centrar el contenido */
+    }
+
+    #user-info {
+        text-align: center; /* Centrar la información del usuario */
+        margin-top: 10px; /* Agregar un margen para separar del título */
+    }
+
+    main {
+        width: 95%; /* Ajustar el ancho del contenedor principal */
+        padding: 10px; /* Reducir el padding */
+        box-shadow: none; /* Eliminar la sombra en pantallas pequeñas */
+    }
+
+    .recompensas-container {
+        display: grid;
+        grid-template-columns: 1fr; /* Mostrar un producto por fila */
+        gap: 15px; /* Reducir el espacio entre los elementos */
+    }
+
+    .producto img {
+        height: auto; /* Ajustar la altura de las imágenes automáticamente */
+    }
+
+    .producto h2 {
+        font-size: 16px; /* Reducir el tamaño de la fuente */
+    }
+
+    .producto p {
+        font-size: 14px; /* Reducir el tamaño de la fuente */
+    }
+
+    button {
+        padding: 8px 12px; /* Reducir el padding del botón */
+        font-size: 14px; /* Reducir el tamaño de la fuente */
+    }
+
+    .modal-content {
+        width: 90%; /* Hacer que el modal sea más pequeño */
+    }
+}

@@ -44,3 +44,36 @@ ul {
     list-style-type: disc;
     padding-left: 20px;
 }
+@media (max-width: 768px) {
+    body {
+        margin: 20px; /* Reducir los márgenes */
+        padding: 10px; /* Ajustar el padding */
+        font-size: 14px; /* Tamaño de fuente más pequeño */
+    }
+
+    .header {
+        padding: 15px; /* Reducir el padding */
+    }
+
+    h1 {
+        font-size: 24px; /* Tamaño de fuente más pequeño */
+    }
+
+    main {
+        padding: 10px; /* Reducir el padding */
+    }
+
+    section {
+        margin-bottom: 15px; /* Menor espacio entre secciones */
+        padding: 10px; /* Reducir el padding interno */
+        border-radius: 3px; /* Bordes más suaves */
+    }
+
+    h2 {
+        font-size: 18px; /* Tamaño de fuente más pequeño */
+    }
+
+    ul {
+        padding-left: 15px; /* Reducir la sangría */
+    }
+}

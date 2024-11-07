@@ -356,7 +356,6 @@
     width: 300px;
     height: 100px;
     text-align: center;
-    margin: 10px 0; /* Ajusta el margen entre las categorías */
   }
 
   .social-media {
@@ -370,20 +369,9 @@
   }
 
   .social-media a {
-    background-color: #c4c1c1;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.3s ease;
-  }
+    display: none;
 
-  .social-media a:hover {
-    background-color: #dc143c;
   }
-
   /* Modificaciones de la barra de desplazamiento */
   .text-scroll-container {
     width: 100%; /* Ajusta el ancho del contenedor de texto */

@@ -46,3 +46,28 @@ p {
     margin: 10px 0;
     color: var(--text-color);
 }
+@media (max-width: 768px) {
+    .container {
+        width: 95%; /* Expandir el contenedor para utilizar mejor el espacio en pantallas pequeñas */
+        padding: 10px; /* Reducir el padding */
+    }
+
+    .header {
+        padding: 8px 0; /* Reducir el padding superior e inferior */
+        font-size: 24px; /* Disminuir el tamaño de la fuente */
+    }
+
+    .content {
+        padding: 15px; /* Reducir el padding interno */
+        border-radius: 5px; /* Bordes más suaves */
+    }
+
+    h2 {
+        font-size: 18px; /* Reducir el tamaño de la fuente */
+    }
+
+    p {
+        font-size: 14px; /* Reducir el tamaño de la fuente */
+        margin: 8px 0; /* Reducir el margen entre párrafos */
+    }
+}
