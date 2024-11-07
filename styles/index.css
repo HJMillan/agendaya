@@ -313,17 +313,7 @@
 .hidden {
   display: none; /* Clase para ocultar el banner */
 }
-
-
 @media (max-width: 768px) {
-  .sidebar {
-    width: 200px;
-  }
-
-  .sidebar.close {
-    width: 70px;
-  }
-
   .home {
     left: 200px;
     width: calc(100% - 200px);
@@ -331,33 +321,44 @@
 
   .carousel-container {
     width: 100%;
-    border: none;
+    max-width: 100%; /* Asegura que el carrusel no tenga un ancho mayor que el de la pantalla */
+    margin: 0 auto; /* Centra el carrusel */
+    overflow: hidden;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
   }
 
+  .carousel-slide img {
+    width: 100%;
+    height: auto; /* Ajusta la altura para mantener la relación de aspecto */
+    object-fit: cover;
+  }
+
+  .carousel-slide {
+    display: flex;
+    width: 100%;
+  }
+  .carousel-slide img:first-child {
+    margin-left: 0; /* Elimina cualquier margen extra en la primera imagen */
+  }
+
+  .carousel-slide img:last-child {
+    margin-right: 0; /* Elimina cualquier margen extra en la última imagen */
+  }
   .category-container {
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: column; /* Cambia la dirección de los elementos a columna en pantallas pequeñas */
+    align-items: center; /* Alinea los elementos al centro */
+    max-width: 100%; /* Asegura que el contenedor de categorías no exceda el tamaño de la pantalla */
+    margin: 0 auto; /* Centra el contenedor */
+    box-sizing: border-box; /* Evita desbordes causados por padding */
   }
 
   .category-box {
     width: 300px;
     height: 100px;
     text-align: center;
-    margin-left: 20px;
+    margin: 10px 0; /* Ajusta el margen entre las categorías */
   }
 
-  .menu-links li a .text {
-    font-size: 14px;
-  }
-
-  /* Modificaciones para cambiar imágenes del carrusel */
-  .carousel-slide img {
-    width: 100%;
-    height: auto;
-  }
-  .carousel-slide {
-    flex-wrap: nowrap; /* Evita que las imágenes se envuelvan */
-  }
   .social-media {
     position: fixed;
     top: 50%;
@@ -381,13 +382,11 @@
 
   .social-media a:hover {
     background-color: #dc143c;
-    /* Cambia el color de fondo al pasar el ratón */
   }
 
-  /*modificaciones scroll bar*/
+  /* Modificaciones de la barra de desplazamiento */
   .text-scroll-container {
-    width: 300px;
-    margin-left: 10px;
+    width: 100%; /* Ajusta el ancho del contenedor de texto */
+    margin: 0 auto; /* Centra el contenedor */
   }
-
 }

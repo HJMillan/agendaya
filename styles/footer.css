@@ -1,270 +1,179 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-
+/* Restaurar el estilo del top y los iconos de social media */
 footer {
   background: #dc143c;
   width: 100%;
-  max-width: 1000px;
   border-radius: 10px;
   padding: 20px;
   box-sizing: border-box;
+  margin: 0 auto;
   position: relative;
-}
-
-footer::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 100px;
-  height: 1px;
-  width: 100%;
-  background: #afafb6;
 }
 
 footer .content {
   max-width: 1000px;
   margin: auto;
-  padding: 30px 40px 40px 40px;
+  padding: 30px 40px;
 }
 
 footer .content .top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 50px;
 }
 
-.content .top .logo-details {
+footer .content .top .logo-details {
   color: #fff;
   font-size: 30px;
 }
 
-.content .top .media-icons {
+footer .content .top .media-icons {
   display: flex;
 }
 
-.content .top .media-icons a {
+footer .content .top .media-icons a {
   height: 40px;
   width: 40px;
   margin: 0 8px;
   border-radius: 50%;
   text-align: center;
   line-height: 40px;
-  color: #fff;
-  font-size: 17px;
-  text-decoration: none;
-  transition: all 0.4s ease;
-}
-
-.media-icons {
-  display: flex;
-  gap: 10px;
-  /* Espacio entre los iconos */
 }
 
 .media-icons img {
   width: 24px;
-  /* Tamaño de los iconos */
   height: auto;
 }
 
-.top .media-icons a:nth-child(1):hover {
-  background: #fff;
-}
-
-.top .media-icons a:nth-child(2):hover {
-  background: #fff;
-}
-
-.top .media-icons a:nth-child(3):hover {
-  background: #fff;
-}
-
-.top .media-icons a:nth-child(4) {
-  background: #0077b5;
-}
-
-.top .media-icons a:nth-child(4):hover {
-  color: #0077b5;
-  background: #fff;
-}
-
-.top .media-icons a:nth-child(5) {
-  background: #ff0000;
-}
-
-.top .media-icons a:nth-child(5):hover {
-  color: #ff0000;
-  background: #fff;
-}
-
 footer .content .link-boxes {
-  width: 100%;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 footer .content .link-boxes .box {
-  width: calc(100% / 5 - 10px);
+  width: calc(20% - 10px);
 }
 
-.content .link-boxes .box .link_name {
+.link-boxes .box .collapsible-title {
   color: #fff;
   font-size: 18px;
-  font-weight: 400;
+  cursor: pointer;
   margin-bottom: 10px;
-  position: relative;
 }
 
-.link-boxes .box .link_name::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  height: 2px;
-  width: 35px;
-  background: #fff;
+.link-boxes .box .collapsible-content {
+  display: none;
+  flex-direction: column;
 }
 
-.content .link-boxes .box li {
-  margin: 6px 0;
+.link-boxes .box .collapsible-content li {
   list-style: none;
+  margin: 6px 0;
 }
 
-.content .link-boxes .box li a {
+.link-boxes .box .collapsible-content li a {
   color: #fff;
-  font-size: 14px;
-  font-weight: 400;
   text-decoration: none;
   opacity: 0.8;
-  transition: all 0.4s ease;
+  transition: opacity 0.4s ease;
 }
 
-.content .link-boxes .box li a:hover {
+.link-boxes .box .collapsible-content li a:hover {
   opacity: 1;
   text-decoration: underline;
 }
 
-.content .link-boxes .input-box {
-  margin-right: 55px;
-}
-
+/* Restaurar el estilo original de Suscribite */
 .link-boxes .input-box input {
-  height: 40px;
   width: 100%;
-  outline: none;
-  border: 2px solid #afafb6;
-  background: #eaeaea;
-  border-radius: 4px;
-  padding: 0 15px;
-  font-size: 15px;
-  color: #000000;
-  margin-top: 5px;
-}
-
-.link-boxes .input-box input::placeholder {
-  color: #afafb6;
-  font-size: 16px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
 }
 
 .link-boxes .input-box input[type="button"] {
   background: #fff;
-  /* color boton sumate*/
   color: #3824d2;
-  border: none;
-  font-size: 18px;
-  font-weight: 500;
-  margin: 4px 0;
-  opacity: 0.8;
   cursor: pointer;
-  transition: all 0.4s ease;
-}
-
-.input-box input[type="button"]:hover {
-  opacity: 1;
 }
 
 footer .bottom-details {
-  width: 100%;
+  text-align: center;
+  padding: 20px;
   background: pink;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-radius: 8px;
+}
+/* Eliminar los puntitos (bullets) de las listas */
+footer .content .link-boxes .box .collapsible-content ul {
+  list-style: none;
+  padding-left: 0; /* Elimina el espacio en blanco a la izquierda */
 }
 
-footer .bottom-details .bottom_text {
-  max-width: 1250px;
-  margin: auto;
-  padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
+/* También puedes añadir un poco de margen para asegurar que no haya espacio adicional en el borde izquierdo */
+footer .content .link-boxes .box .collapsible-content li {
+  margin-left: 0;
 }
 
-.bottom-details .bottom_text span,
-.bottom-details .bottom_text a {
-  font-size: 14px;
-  font-weight: 300;
-  color: red;
-  opacity: 0.8;
-  text-decoration: none;
-}
-
-.bottom-details .bottom_text a:hover {
-  opacity: 1;
-  text-decoration: underline;
-}
-
-.bottom-details .bottom_text a {
-  margin-right: 10px;
-}
-
+/* Media query para pantallas pequeñas */
 @media (max-width: 768px) {
-  footer {
-    margin-left: 20%;
-  }
-
-  /* Ajustes generales para el footer en pantallas pequeñas */
   footer .content {
-    padding: 10px;
     text-align: center;
+    padding: 20px;
   }
 
-  /* Colapsar los títulos de las secciones */
-  footer .content .link-boxes .box .link_name {
-    font-size: 16px;
-    cursor: pointer;
-    display: none;
-    /* Contrae los títulos */
+  footer .content .top {
+    flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    align-items: center;
+    justify-content: center;
   }
 
-  /* Cambia la dirección de las cajas a columna para mayor compacidad */
+  footer .content .top .logo-details {
+    font-size: 25px;  /* Ajusta el tamaño del texto */
+    margin-bottom: 20px; /* Espacio entre el logo y los iconos */
+  }
+
+  footer .content .top .media-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap; /* Asegura que los iconos se alineen bien */
+  }
+
   footer .content .link-boxes {
     flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
   }
 
   footer .content .link-boxes .box {
-    width: 100%;
-    margin-bottom: 10px;
+    width: 80%; /* Ancho ajustado para pantallas pequeñas */
+    margin-bottom: 20px; /* Separación entre las cajas */
   }
 
-  /* Ajuste para las cajas de input */
-  footer .content .link-boxes .input-box input {
-    width: 100%;
-    /* Evitar desbordamiento */
-  }
-
-  /* Ajustes generales para la sección inferior */
-  footer .bottom-details {
-    text-align: center;
-    padding: 10px 20px;
+  .collapsible-title {
+    font-size: 20px; /* Aumentar el tamaño de la fuente para la sección colapsable */
   }
 
   .collapsible-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
+    display: none;
   }
 
-  .collapsible-content a {
+  .collapsible-title.active + .collapsible-content {
     display: block;
-    padding: 5px 0;
+  }
+
+  /* Restaurar el estilo de Suscribite */
+  .link-boxes .input-box input {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .link-boxes .input-box input[type="button"] {
+    background: #fff;
+    color: #3824d2;
+    cursor: pointer;
+    margin-top: 10px;
   }
 }

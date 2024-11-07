@@ -336,4 +336,51 @@
   body.dark .home .text {
     color: var(--text-color);
   }
-  
+@media (max-width: 768px) {
+  /* Ajusta el ancho de la barra lateral */
+  .sidebar {
+    width: 70px;
+  }
+
+  .sidebar.close {
+    width: 0;
+  }
+
+  /* Oculta textos y muestra solo íconos en la navegación */
+  .sidebar .text {
+    display: none;
+  }
+
+  .sidebar header .image img {
+    width: 30px;
+    display: block;
+    margin: 0 auto;
+}
+  /* Redimensiona las imágenes en la cabecera 
+  .sidebar header .image img {
+    width: 30px;
+  }*/
+
+  /* Ajusta la posición del botón de toggle para el menú */
+  .sidebar header .toggle {
+    right: -20px;
+    font-size: 18px;
+  }
+
+  /* Optimiza la barra de búsqueda */
+  .sidebar li.search-box input {
+    font-size: 14px;
+    padding: 5px;
+  }
+  .sidebar .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  /* Ajusta el área principal de contenido */
+  .home {
+    left: 70px;
+    width: calc(100% - 70px);
+  }
+}
