@@ -1,4 +1,4 @@
-/* Restaurar el estilo del top y los iconos de social media */
+/* Estilo general del footer */
 footer {
   background: #dc143c;
   width: 100%;
@@ -13,6 +13,7 @@ footer .content {
   max-width: 1000px;
   margin: auto;
   padding: 30px 40px;
+  text-align: center; /* Centra el contenido */
 }
 
 footer .content .top {
@@ -54,6 +55,36 @@ footer .content .link-boxes .box {
   width: calc(20% - 10px);
 }
 
+.link-boxes .input-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: auto; /* Ajusta el ancho para que se adapte al contenido */
+  margin: 20px auto;
+  max-width: 600px; /* Limita el ancho máximo */
+  text-align: center; /* Centra el contenido dentro de .input-box */
+}
+
+.link-boxes .input-box input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  max-width: 400px;
+  min-width: 200px;
+}
+
+.link-boxes .input-box input[type="button"] {
+  padding: 10px 20px;
+  background: #fff;
+  color: #3824d2;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
 .link-boxes .box .collapsible-title {
   color: #fff;
   font-size: 18px;
@@ -83,36 +114,17 @@ footer .content .link-boxes .box {
   text-decoration: underline;
 }
 
-/* Restaurar el estilo original de Suscribite */
-.link-boxes .input-box input {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  margin-top: 10px;
-}
-
-.link-boxes .input-box input[type="button"] {
-  background: #fff;
-  color: #3824d2;
-  cursor: pointer;
-}
-
 footer .bottom-details {
   text-align: center;
   padding: 20px;
   background: pink;
   border-radius: 8px;
 }
-/* Eliminar los puntitos (bullets) de las listas */
-footer .content .link-boxes .box .collapsible-content ul {
-  list-style: none;
-  padding-left: 0; /* Elimina el espacio en blanco a la izquierda */
-}
 
-/* También puedes añadir un poco de margen para asegurar que no haya espacio adicional en el borde izquierdo */
-footer .content .link-boxes .box .collapsible-content li {
-  margin-left: 0;
+/* Estilo general para eliminar viñetas en listas */
+footer ul {
+  list-style: none;
+  padding-left: 0;
 }
 
 /* Media query para pantallas pequeñas */
@@ -123,21 +135,20 @@ footer .content .link-boxes .box .collapsible-content li {
   }
 
   footer .content .top {
-    flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    flex-direction: column;
     align-items: center;
     justify-content: center;
   }
 
   footer .content .top .logo-details {
-    font-size: 25px;  /* Ajusta el tamaño del texto */
-    margin-bottom: 20px; /* Espacio entre el logo y los iconos */
+    font-size: 25px;
+    margin-bottom: 20px;
   }
 
   footer .content .top .media-icons {
-    display: flex;
     justify-content: center;
     gap: 10px;
-    flex-wrap: wrap; /* Asegura que los iconos se alineen bien */
+    flex-wrap: wrap;
   }
 
   footer .content .link-boxes {
@@ -147,33 +158,29 @@ footer .content .link-boxes .box .collapsible-content li {
   }
 
   footer .content .link-boxes .box {
-    width: 80%; /* Ancho ajustado para pantallas pequeñas */
-    margin-bottom: 20px; /* Separación entre las cajas */
+    width: 80%;
+    margin-bottom: 20px;
   }
 
   .collapsible-title {
-    font-size: 20px; /* Aumentar el tamaño de la fuente para la sección colapsable */
-  }
-
-  .collapsible-content {
-    display: none;
+    font-size: 20px;
   }
 
   .collapsible-title.active + .collapsible-content {
     display: block;
   }
 
-  /* Restaurar el estilo de Suscribite */
-  .link-boxes .input-box input {
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
+  .link-boxes .input-box {
+    flex-direction: column;
+    align-items: center;
+    width: auto;
   }
 
+  .link-boxes .input-box input[type="text"],
   .link-boxes .input-box input[type="button"] {
-    background: #fff;
-    color: #3824d2;
-    cursor: pointer;
-    margin-top: 10px;
+    width: 100%;
+    max-width: 400px;
+    margin: 5px 0;
+    text-align: center;
   }
 }
